@@ -7,7 +7,6 @@ router.get("/electricity", (ctx) => {
   const factor = 0.759;
 
   const kwh = Number(ctx.request.url.searchParams.get("kwh"));
-  console.log("kwh", kwh);
   if (kwh) {
     const carbon = kwh * factor;
     const inTonnes = carbon / 1000;
